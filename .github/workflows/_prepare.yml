@@ -18,7 +18,7 @@ on:
 
 jobs:
   builder-sha:
-    runs-on: "macos-15"
+    runs-on: "macos-26"
     outputs:
       ref: ${{ steps.ref.outputs.ref }}
       sha: ${{ steps.sha.outputs.sha }}
@@ -54,8 +54,8 @@ jobs:
     strategy:
       matrix:
         os:
-          - macos-15
-          - macos-15-intel
+          - macos-26
+          - macos-26-intel
     runs-on: ${{ matrix.os }}
     steps:
       - name: Cache emacs-builder (${{ runner.arch }})
